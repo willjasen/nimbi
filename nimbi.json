@@ -244,8 +244,8 @@
          },
          {
             "IpProtocol" : "tcp",
-            "FromPort" : "8888",
-            "ToPort" : "8888",
+            "FromPort" : "8384",
+            "ToPort" : "8384",
             "CidrIp" : { "Ref" : "AllowedSubnet" }
          },
          {
@@ -343,7 +343,7 @@
                     "  \"directory_root\" : \"/secure\",\n",
 
                     "  \"webui\": {\n",
-                    "    \"listen\" : \"0.0.0.0:8888\",\n",
+                    "    \"listen\" : \"0.0.0.0:8384\",\n",
                     "    \"force_https\" : true,\n",
                     "    \"login\" : \"", { "Ref": "WebInterfaceUsername" }, "\",\n",
                     "    \"password\" : \"", { "Ref": "WebInterfacePassword" }, "\",\n",
@@ -563,7 +563,7 @@
     "Link" : {
       "Description" : "HTTPS link to access the instance",
       "Value" : { "Fn::Join" : ["", [
-        "https://", { "Ref": "PublicIP" }, ":8888"
+        "https://", { "Ref": "PublicIP" }, ":8384"
       ]]}
 
     }
