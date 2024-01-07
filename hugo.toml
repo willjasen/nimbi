@@ -1,10 +1,22 @@
 baseURL = '/'
 languageCode = 'en-us'
-title = 'nimbi.it'
+title = 'nimbi'
 theme = ["github.com/dzello/reveal-hugo"]
+disableKinds = ["sitemap", "RSS"]
+relativeURLs = true
+uglyURLs = true
 
 [markup.goldmark.renderer]
 unsafe = true
+
+[params.reveal_hugo]
+custom_theme = "stylesheets/nimbi.css"
+#enableSourceMap = true
+#custom_theme_compile = true
+
+#[reveal_hugo.custom_theme_options]
+#targetPath = "stylesheets/nimbi.css"
+#enableSourceMap = true
 
 [outputFormats.Reveal]
 baseName = "index"

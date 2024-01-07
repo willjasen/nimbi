@@ -8,9 +8,8 @@
 
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/reveal-js/dist/reset.css">
-<link rel="stylesheet" href="/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/reveal-js/dist/theme/black.css" id="theme">
-<link rel="stylesheet" href="/highlight-js/default.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="./reveal-js/dist/reset.css">
+<link rel="stylesheet" href="./reveal-js/dist/reveal.css"><link rel="stylesheet" href="./stylesheets/nimbi.css" id="theme"><link rel="stylesheet" href="./highlight-js/default.min.css">
   </head>
   <body>
     
@@ -18,51 +17,17 @@
       <div class="slides">
   
 
-    <section><h1 id="--">&ndash;</h1>
-<p>nimbi.it</p>
+    <section><h1 id="nimbi">nimbi</h1>
+<p>makes developing and managing IT easy and efficient</p>
+</section>
 
-<script src="https://js.stripe.com/v3"></script>
-
-
-<button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
-  id="checkout-button-price_1OVpDb21Mlrvv4WNDvecS7yy"
-  role="link"
-  type="button"
->
-  Pay
-</button>
-
-<div id="error-message"></div>
-
-<script>
-(function() {
-  var stripe = Stripe('pk_test_bBHA3XVNfQbTW1IrDubhhWPP');
-
-  var checkoutButton = document.getElementById('checkout-button-price_1OVpDb21Mlrvv4WNDvecS7yy');
-  checkoutButton.addEventListener('click', function () {
-    
-
-    stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1OVpDb21Mlrvv4WNDvecS7yy', quantity: 1}],
-      mode: 'payment',
-      
-
-      successUrl: window.location.protocol + '//nimbi.it/success',
-      cancelUrl: window.location.protocol + '//nimbi.it/canceled',
-    })
-    .then(function (result) {
-      if (result.error) {
-        
-
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
-
+<section data-noprocess data-shortcode-slide
+      data-background="#87ceeb"
+      id="hello"
+      data-transition="fade">
+  
+<p>Technology should work on our behalf, not the other way around</p>
+<p>Our focus is on creating efficient, user-friendly computing environments that leave more time to work — and relax.  Our philosophy is that automation and efficiency is key and responsive, friendly support fills in when things go awry.  When issues do arise, incorporating solutions back into automation ensures manageable, scalable problem solving.</p>
 </section>
 
   
@@ -72,19 +37,19 @@
       
 
     </div>
-<script type="text/javascript" src=/reveal-hugo/object-assign.js></script>
+<script type="text/javascript" src=./reveal-hugo/object-assign.js></script>
 
 
-<script src="/reveal-js/dist/reveal.js"></script>
+<script src="./reveal-js/dist/reveal.js"></script>
 
 
-  <script type="text/javascript" src="/reveal-js/plugin/markdown/markdown.js"></script>
+  <script type="text/javascript" src="./reveal-js/plugin/markdown/markdown.js"></script>
   
-  <script type="text/javascript" src="/reveal-js/plugin/highlight/highlight.js"></script>
+  <script type="text/javascript" src="./reveal-js/plugin/highlight/highlight.js"></script>
   
-  <script type="text/javascript" src="/reveal-js/plugin/zoom/zoom.js"></script>
+  <script type="text/javascript" src="./reveal-js/plugin/zoom/zoom.js"></script>
   
-  <script type="text/javascript" src="/reveal-js/plugin/notes/notes.js"></script>
+  <script type="text/javascript" src="./reveal-js/plugin/notes/notes.js"></script>
   
 <script type="text/javascript">
   
@@ -103,7 +68,7 @@
   }
 
   var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
-  var revealHugoSiteParams = {};
+  var revealHugoSiteParams = {"custom_theme":"stylesheets/nimbi.css"};
   var revealHugoPageParams = {};
 
   var revealHugoPlugins = {
