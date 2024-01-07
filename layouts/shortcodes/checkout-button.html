@@ -33,8 +33,8 @@
        * Instead use one of the strategies described in
        * https://stripe.com/docs/payments/checkout/fulfill-orders
        */
-      successUrl: window.location.protocol + '//nimbi.it/successful',
-      cancelUrl: window.location.protocol + '//nimbi.it/cancelled',
+      successUrl: 'https://nimbi.it/successful',
+      cancelUrl: 'https://nimbi.it/cancelled',
     })
     .then(function (result) {
       if (result.error) {
