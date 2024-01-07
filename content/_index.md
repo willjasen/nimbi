@@ -6,3 +6,5 @@ outputs = ["Reveal"]
 # --
 
 nimbi.it
+
+{{< checkout-button >}}

@@ -20,6 +20,49 @@
 
     <section><h1 id="--">&ndash;</h1>
 <p>nimbi.it</p>
+
+<script src="https://js.stripe.com/v3"></script>
+
+
+<button
+  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
+  id="checkout-button-price_1OVmpa21Mlrvv4WNKZuxnfLU"
+  role="link"
+  type="button"
+>
+  Checkout
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+  var stripe = Stripe('pk_live_TIU5aOeQg2Zb1Ktp3S5N5L3E');
+
+  var checkoutButton = document.getElementById('checkout-button-price_1OVmpa21Mlrvv4WNKZuxnfLU');
+  checkoutButton.addEventListener('click', function () {
+    
+
+    stripe.redirectToCheckout({
+      lineItems: [{price: 'price_1OVmpa21Mlrvv4WNKZuxnfLU', quantity: 1}],
+      mode: 'payment',
+      
+
+      successUrl: window.location.protocol + '//nimbi.it/successful',
+      cancelUrl: window.location.protocol + '//nimbi.it/cancelled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        
+
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
+
 </section>
 
   
@@ -81,6 +124,15 @@
 
 
 
+
+  
+  
+
+  
+  
+
+  
+  
 
   
   
